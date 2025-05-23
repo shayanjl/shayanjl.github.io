@@ -94,7 +94,8 @@ PCR, DNA Extraction, Flow Cytometry, Immunohistochemistry
 - 📧 Email: shayanjalali@rcsi.com  
 - 📧 Email: shayanjalali.bioinformatics@gmail.com  
 - 🔗 GitHub: [github.com/shayanjl](https://github.com/shayanjl)  
-- 🔗 LinkedIn: [linkedin.com/in/shayanjl](https://linkedin.com/in/shayanjl)  
+- 🔗 LinkedIn: [linkedin.com/in/shayanjl](https://linkedin.com/in/shayanjl)
+- Book a meeting with me: [cal.com/shayan-jalali/15min](https://cal.com/shayan-jalali/15min)
 - 🏠 Dublin, Ireland | Novara, Italy
 
 ---
