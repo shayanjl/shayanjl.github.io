@@ -17,6 +17,7 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 > “Shayan is a highly dedicated student whose grades have well exceeded expectations, known for his leadership, planning, and active academic involvement.”  
 > — *Professor Mohammad Kazem Mohammadi, IAU University*
 
+--- 
 
 
 ## 🔗 Connect with Me
