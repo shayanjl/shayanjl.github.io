@@ -104,10 +104,11 @@ Welcome to the official site of **Shayan Jalali**, a master's student in *Medica
 ## 🔗 Connect with Me
 
 - 🌐 Website: [shayanjl.github.io](https://shayanjl.github.io)
-- 📧 Email: shayanjalali.bioinformatics@gmail.com | shayanjalali@rcsi.com  
-- 📍 Locations: Novara, Italy & Dublin, Ireland  
+- 📧 Email: shayanjalali.bioinformatics@gmail.com
+- 📧 Email: shayanjalali@rcsi.com  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/shayanjl)  
 - 📺 [YouTube](https://www.youtube.com/@ShayanJL)
+- 📍 Locations: Novara, Italy & Dublin, Ireland  
 
 ---
 
