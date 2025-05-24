@@ -25,6 +25,8 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 - 📧 Email: shayanjalali@rcsi.com  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/shayanjl)  
 - 📺 [YouTube](https://www.youtube.com/@ShayanJL)
+- 🔗 [Strava](https://strava.app.link/JaxhEPBCDTb)
+- 🔗 [TheInovateLab](TheInovateLab.it)
 - 📍 Locations: Novara, Italy & Dublin, Ireland  
 
 ---
