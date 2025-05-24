@@ -1,6 +1,4 @@
-# Shayan Jalali – Academic & Research Website
-
-Welcome to the official site of **Shayan Jalali**, a master's student in *Medical Biotechnology* at **Università del Piemonte Orientale (UPO), Italy**, and Erasmus+ research intern at **RCSI Dublin**. I specialize in **bioinformatics**, **computational modeling**, and **machine learning applications in cancer research**, with over 6 years of international experience across both wet lab and computational biology environments.
+Welcome to my academic and research website. I'm Shayan Jalali, a master's student in Medical Biotechnology at Università del Piemonte Orientale (UPO), Italy, and currently an Erasmus+ research intern at RCSI Dublin. I specialize in bioinformatics, computational modeling, and machine learning applications in cancer research, with over six years of international experience in both wet lab and computational biology settings.
 
 
 ---
@@ -98,6 +96,7 @@ Welcome to the official site of **Shayan Jalali**, a master's student in *Medica
 - PCR, DNA extraction, immunohistochemistry, tissue culture, flow cytometry
 
 ---
+here, you can download my last version of CV:
 - 📄 [Download My CV](ShayanJL.pdf)
 ---
 
