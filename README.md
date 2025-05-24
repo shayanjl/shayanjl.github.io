@@ -98,7 +98,8 @@ Welcome to the official site of **Shayan Jalali**, a master's student in *Medica
 - PCR, DNA extraction, immunohistochemistry, tissue culture, flow cytometry
 
 ---
-
+- 📄 Download my CV: [Download My CV](ShayanJL.pdf)
+---
 ## 🔗 Connect with Me
 
 - 🌐 Website: [shayanjl.github.io](https://shayanjl.github.io)
