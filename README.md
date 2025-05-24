@@ -22,13 +22,14 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 
 ## 🔗 Connect with Me
 
-- 🌐 Website: [shayanjl.github.io](https://shayanjl.github.io)
-- 📧 Email: shayanjalali.bioinformatics@gmail.com
-- 📧 Email: shayanjalali@rcsi.com  
+- 🌐 [Website](https://shayanjl.github.io)
 - 🔗 [LinkedIn](https://www.linkedin.com/in/shayanjl)  
 - 📺 [YouTube](https://www.youtube.com/@ShayanJL)
 - 🔗 [Strava](https://strava.app.link/JaxhEPBCDTb)
 - 🔗 [TheInovateLab](https://www.theinnovationlab.it/)
+- 📧 Email: shayanjalali.bioinformatics@gmail.com
+- 📧 Email: shayanjalali@rcsi.com
+- 📧 Email: 20057956@studenti.uniupo.it
 - 📍 Locations: Novara, Italy & Dublin, Ireland  
 
 
