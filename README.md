@@ -1,5 +1,3 @@
-# shayanjl.github.io
-
 # Shayan Jalali – Personal Academic & Research Website
 
 Welcome to the official academic and research website of **Shayan Jalali**, a master's student in *Medical Biotechnology* at **Università del Piemonte Orientale (UPO), Italy**. I specialize in **bioinformatics**, **data science**, and **computational biology**, with a focus on **cancer research**, **precision medicine**, and **multi-omics integration**.
@@ -17,7 +15,6 @@ Welcome to the official academic and research website of **Shayan Jalali**, a ma
 - **B.Sc. in Cellular and Molecular Biology – Biotechnology**  
   *Azad University, Ahvaz, Iran*  
   *2016–2021*  
-  Final Grade: 15.58/20
 
 ---
 
@@ -65,24 +62,24 @@ PCR, DNA Extraction, Flow Cytometry, Immunohistochemistry
 ---
 
 ## 📝 Publications
-
-- **Submitted**  
-  *Remodeling of Nurse Macrophages and Erythroblastic Islands in AML*  
+  
+- *Remodeling of Nurse Macrophages and Erythroblastic Islands in AML*
+- **Submitted**
   Role: Contributing researcher – RCSI, Erasmus+, Master's Thesis  
   Tools: Julia, DifferentialEquations.jl, GSA
 
-- **Manuscript in Preparation**  
-  *Peritoneal Metastasis Prediction in Gastric Cancer*  
+- *Peritoneal Metastasis Prediction in Gastric Cancer*
+  **Manuscript in Preparation**  
   Role: First author  
   Tools: R (tidyverse, caret), ML models, biomedical feature engineering
 
-- **Manuscript in Preparation**  
-  *miRNA Biomarkers for Early Gastric Cancer Detection*  
+- *miRNA Biomarkers for Early Gastric Cancer Detection*  
+  **Manuscript in Preparation**  
   Role: Contributing researcher  
   Tools: WGCNA, Enrichr, miRTarBase, SVM, Random Forest, GEO validation
 
-- **Published**  
-  *Nanobody Use in Cancer Therapy*  
+- *Nanobody Use in Cancer Therapy*  
+  **Published**
   1st Int. Congress of Cancer Genomics, Tehran, Iran (2023)  
   Role: First author and presenter  
   Link: [Civilica.com](https://civilica.com/doc/1823184/)
@@ -92,10 +89,12 @@ PCR, DNA Extraction, Flow Cytometry, Immunohistochemistry
 ## 🌐 Contact
 
 - 📧 Email: shayanjalali@rcsi.com  
-- 📧 Email: shayanjalali.bioinformatics@gmail.com  
+- 📧 Email: shayanjalali.bioinformatics@gmail.com
+- 📧 Email: 20057956@studenti.uniupo.it 
 - 🔗 GitHub: [github.com/shayanjl](https://github.com/shayanjl)  
 - 🔗 LinkedIn: [linkedin.com/in/shayanjl](https://linkedin.com/in/shayanjl)
-- Book a meeting with me: [cal.com/shayan-jalali/15min](https://cal.com/shayan-jalali/15min)
+- 🔗 Book a meeting with me: [cal.com/shayan-jalali/15min](https://cal.com/shayan-jalali/15min)
+- 🔗 Website: [shayanjl.github.io](shayanjl.github.io)
 - 🏠 Dublin, Ireland | Novara, Italy
 
 ---
