@@ -1,7 +1,8 @@
 Welcome to my academic and research website. I'm Shayan Jalali, a master's student in Medical Biotechnology at Università del Piemonte Orientale (UPO), Italy, and currently an Erasmus+ research intern at RCSI Dublin. I specialize in bioinformatics, computational modeling, and machine learning applications in cancer research, with over six years of international experience in both wet lab and computational biology settings.
+
 --- 
 
-> **I’m actively seeking PhD opportunities in computational biology, systems medicine, and AI-based biomedical research.**
+**I’m actively seeking PhD opportunities in computational biology, systems medicine, and AI-based biomedical research.**
 
 ---  
 
@@ -28,5 +29,4 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 - 🔗 [TheInovateLab](https://www.theinnovationlab.it/)
 - 📍 Locations: Novara, Italy & Dublin, Ireland  
 
----
 
