@@ -27,6 +27,7 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 - 📺 [YouTube](https://www.youtube.com/@ShayanJL)
 - 🔗 [Strava](https://strava.app.link/JaxhEPBCDTb)
 - 🔗 [TheInovateLab](https://www.theinnovationlab.it/)
+- 🔗 [Book a Meeting](https://cal.com/shayan-jalali/15min)
 - 📧 Email: shayanjalali.bioinformatics@gmail.com
 - 📧 Email: shayanjalali@rcsi.com
 - 📧 Email: 20057956@studenti.uniupo.it
