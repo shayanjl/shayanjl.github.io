@@ -17,8 +17,6 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 > — *Professor Mohammad Kazem Mohammadi, IAU University*
 <p align="center">
   <img src="https://user-images.githubusercontent.com/74038190/213911110-aedbef38-a29f-4b6b-a65c-11608b4f75a5.gif" width="300" style="margin: 0 10px;">
-  <img src="https://user-images.githubusercontent.com/74038190/213911110-aedbef38-a29f-4b6b-a65c-11608b4f75a5.gif" width="300" style="margin: 0 10px;">
-  <img src="https://user-images.githubusercontent.com/74038190/213911110-aedbef38-a29f-4b6b-a65c-11608b4f75a5.gif" width="300" style="margin: 0 10px;">
 </p>
 
 --- 
