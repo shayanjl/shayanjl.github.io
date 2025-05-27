@@ -5,7 +5,6 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 - 📄 [Download My CV](ShayanJL.pdf)
 
 --- 
- 
 
 **I’m actively seeking PhD opportunities in computational biology, systems medicine, and AI-based biomedical research.**
 
@@ -16,6 +15,11 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 
 > “Shayan is a highly dedicated student whose grades have well exceeded expectations, known for his leadership, planning, and active academic involvement.”  
 > — *Professor Mohammad Kazem Mohammadi, IAU University*
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/74038190/213911110-aedbef38-a29f-4b6b-a65c-11608b4f75a5.gif" width="300" style="margin: 0 10px;">
+  <img src="https://user-images.githubusercontent.com/74038190/213911110-aedbef38-a29f-4b6b-a65c-11608b4f75a5.gif" width="300" style="margin: 0 10px;">
+  <img src="https://user-images.githubusercontent.com/74038190/213911110-aedbef38-a29f-4b6b-a65c-11608b4f75a5.gif" width="300" style="margin: 0 10px;">
+</p>
 
 --- 
 
@@ -32,6 +36,8 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 - 📧 Email: shayanjalali.bioinformatics@gmail.com
 - 📧 Email: shayanjalali@rcsi.com
 - 📧 Email: 20057956@studenti.uniupo.it
-- 📍 Locations: Novara, Italy & Dublin, Ireland  
+- 📍 Locations: Novara, Italy & Dublin, Ireland
+
+
 
 
