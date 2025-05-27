@@ -31,6 +31,7 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 - 🔗 [TheInovateLab](https://www.theinnovationlab.it/)
 - 🔗 [Book a Meeting](https://cal.com/shayan-jalali/15min)
 - 🔗 [Coursera](https://www.coursera.org/learner/shayanjl)
+- 🔗 [WhatsApp](https://wa.me/message/OM3DBDI2O44DB1)
 - 📧 Email: shayanjalali.bioinformatics@gmail.com
 - 📧 Email: shayanjalali@rcsi.com
 - 📧 Email: 20057956@studenti.uniupo.it
