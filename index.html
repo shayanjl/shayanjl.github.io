@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shayan Jalali — Bioinformatics & Computational Biology</title>
+  <meta name="description" content="Portfolio website of Shayan Jalali — bioinformatics, computational modeling, and machine learning for biomedical research." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧬</text></svg>">
+  <style>
+    /* —— CSS: minimal, responsive, dark-mode aware —— */
+    :root{
+      --topic: #ffcc00;
+      --bg: #0b1220; /* deep blue-gray */
+      --bg-elev: #111a2b;
+      --text: #e6eefc;
+      --muted: #a9b6d6;
+      --brand: #7aa2ff; /* soft blue */
+      --accent: #6ee7b7; /* mint */
+      --ring: rgba(122,162,255,.35);
+      --card: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f9fe; --bg-elev:#ffffff; --text:#0a1020; --muted:#5b6786; --brand:#3b6cff; --accent:#10b981; --ring:rgba(59,108,255,.25); }
+      body{ background-image: radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%), radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%); }
+    }
+    *{ box-sizing: border-box }
+    html,body{ margin:0; padding:0 }
+    body{
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: var(--bg);
+      background-image: radial-gradient(40vw 40vw at -10% -20%, #102038 0, transparent 70%), radial-gradient(30vw 30vw at 110% -10%, #0b2a2a 0, transparent 60%);
+    }
+    a{ color: var(--brand); text-decoration: none }
+    a:hover{ text-decoration: underline }
+    .container{ max-width: 1100px; margin: 0 auto; padding: 24px }
+    header{
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav{ display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .nav a.brand{ font-weight: 800; letter-spacing:.4px; color: var(--text) }
+    .nav .links{ display: flex; gap: 18px; flex-wrap: wrap; }
+    .btn{ display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:14px; border:1px solid rgba(255,255,255,.14); background: var(--card); color:var(--text); box-shadow: 0 6px 24px -12px var(--ring); }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 28px -10px var(--ring); }
+    .btn.primary{ background: linear-gradient(180deg, color-mix(in oklab, var(--brand) 30%, #ffffff 10%), color-mix(in oklab, var(--brand) 15%, #000 85%)); border-color: transparent; }
+    .grid{ display:grid; gap: 22px; }
+    @media (min-width: 900px){ .grid.cols-3{ grid-template-columns: repeat(3,1fr) } }
+    @media (min-width: 700px){ .grid.cols-2{ grid-template-columns: repeat(2,1fr) } }
+    section{ padding: 56px 0 }
+    h1{ font-size: clamp(30px, 4.6vw, 54px); line-height: 1.1; margin: 0 0 16px 0 ; color: var(--topic) }
+    h2{ font-size: clamp(22px, 2.8vw, 32px); margin: 0 0 12px 0 ; color: var(--topic) }
+    p.lead{ font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 70ch }
+    .hero{ display:grid; gap: 22px; align-items: center; grid-template-columns: 1.1fr .9fr; }
+    .hero .card{ border-radius: 20px; padding: 22px; background: var(--card); border: 1px solid rgba(255,255,255,.06) }
+    .project-thumb{ width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); display:block; }
+    .pill{ font-size: 12px; display:inline-block; padding: .35rem .6rem; border-radius: 999px; background: #1a243a; color: var(--muted); border:1px solid rgba(255,255,255,.08) }
+    .card{ border-radius: 16px; background: var(--bg-elev); border: 1px solid rgba(255,255,255,.06); padding: 18px }
+    .muted{ color: var(--muted) }
+    ul.clean{ list-style: none; padding: 0; margin: 0 }
+    ul.clean li{ padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,.08) }
+    footer{ padding: 48px 0; color: var(--muted); text-align:center; border-top:1px solid rgba(255,255,255,.06) }
+    .tag{ font-size: 12px; padding: .28rem .55rem; border-radius: 999px; border:1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.03) }
+    .flex{ display:flex; gap:12px; align-items:center; flex-wrap: wrap }
+    .space{ height: 16px }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
+      .avatar{ width:140px; height:140px; border-radius:999px; object-fit:cover; border:2px solid rgba(255,255,255,.18); box-shadow: 0 8px 30px -12px var(--ring); }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">Shayan Jalali</a>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <button class="btn" id="themeBtn" aria-label="Toggle theme">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div>
+        <img src="assets/img/profile.jpg" alt="Shayan Jalali" class="avatar" />
+        <span class="pill">Bioinformatics • Computational Biology • ML</span>
+        <h1>Turning biological data into insight.</h1>
+        <p class="lead">I work across transcriptomics, systems biology, and modeling. Explore my projects, publications, and get my CV below.</p>
+        <div class="flex" style="margin-top:14px">
+          <a class=\"btn primary\" href=\"ShayanJL.pdf\" download>⬇️ Download CV</a>
+          <div class=\"flex\">
+            <a class=\"btn\" href=\"mailto:shayanjalali.bioinformatics@gmail.com\">✉️ Gmail</a>
+            <a class=\"btn\" href=\"mailto:shayan.jalali@uniupo.it\">✉️ Uniupo</a>
+            <a class=\"btn\" href=\"mailto:shayan.jalali@rcsi.ie\">✉️ RCSI</a>
+          </div>
+          <a class="btn" href="https://www.linkedin.com/in/shayanjl" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Quick facts</h2>
+        <ul class="clean">
+          <li>🎓 MSc in Medical Biotechnology (UPO, Italy)</li>
+          <li>🔬 Erasmus+ researcher at RCSI Dublin</li>
+          <li>🧮 Modeling: Julia, R, Python</li>
+          <li>📍 Novara, Italy · Dublin, Ireland</li>
+        </ul>
+        <div class="space"></div>
+        <div class="flex"><span class="tag">R</span><span class="tag">Python</span><span class="tag">Julia</span><span class="tag">WGCNA</span><span class="tag">DE</span><span class="tag">GSEA</span><span class="tag">Cytoscape</span></div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm a computational biologist focused on biomarker discovery and systems modeling. I build reproducible analyses and clean visualizations, typically in R/Python, and I prototype mathematical models (ODEs) in Julia.</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid cols-3">
+        <article class="card">
+          <img class="project-thumb" src="assets/img/projects/aml.jpg" alt="AML Erythropoiesis Modeling" loading="lazy" />
+          <h3 style="margin-top:12px">AML Erythropoiesis Modeling</h3>
+          <p class="muted">Julia ODE models for erythroblastic islands and nurse macrophages; sensitivity analyses (Sobol, Morris).</p>
+          <a class="btn" href="#">View repo</a>
+        </article>
+        <article class="card">
+          <img class="project-thumb" src="assets/img/projects/gastric-ml.jpg" alt="Gastric Cancer Machine Learning" loading="lazy" />
+          <h3 style="margin-top:12px">Gastric Cancer ML</h3>
+          <p class="muted">Transcriptomics + ML for biomarker panels and peritoneal metastasis prediction; external GEO validation.</p>
+          <a class="btn" href="#">View repo</a>
+        </article>
+        <article class="card">
+          <img class="project-thumb" src="assets/img/projects/scrna.jpg" alt="Single-cell RNA-seq Pipelines" loading="lazy" />
+          <h3 style="margin-top:12px">Single‑cell Pipelines</h3>
+          <p class="muted">scRNA‑seq preprocessing, clustering, and DE with Seurat/Scanpy; pathway enrichment and network analysis.</p>
+          <a class="btn" href="#">View repo</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications & Works</h2>
+      <ul class="clean">
+        <li>2025 · Remodeling of Nurse Macrophages and EBIs in AML — <em>contributing researcher</em></li>
+        <li>2025 · miRNA biomarkers for early gastric cancer — <em>contributor</em></li>
+        <li>2023 · Nanobodies and biotechnology in cancer — <em>first author</em></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="muted">Best ways to reach me:</p>
+      <div class="flex">
+        <a class="btn" href="mailto:shayanjalali.bioinformatics@gmail.com">Email</a>
+        <a class="btn" href="https://wa.me/message/OM3DBDI2O44DB1" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://cal.com/shayan-jalali/15min" target="_blank" rel="noopener">Book a meeting</a>
+        <a class="btn" href="https://shayanjl.github.io" target="_blank" rel="noopener">Website</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Shayan Jalali · Built with HTML, CSS & a sprinkle of JS
+    </div>
+  </footer>
+
+  <script>
+    // —— JS: theme toggle + year ——
+    const btn = document.getElementById('themeBtn');
+    const current = localStorage.getItem('theme') || 'auto';
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const setTheme = (mode) => {
+      document.documentElement.dataset.theme = mode;
+      localStorage.setItem('theme', mode);
+      btn.setAttribute('aria-pressed', mode === 'dark');
+    }
+    const cycle = { 'auto':'dark', 'dark':'light', 'light':'auto' };
+    setTheme(current);
+    btn.addEventListener('click', () => setTheme(cycle[localStorage.getItem('theme') || 'auto']));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
