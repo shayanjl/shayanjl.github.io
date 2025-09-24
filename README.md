@@ -2,7 +2,7 @@ Welcome to my academic and research website. I'm Shayan Jalali, a master's stude
 
 ---
 
-- 📄 [Download My CV](ShayanJL.pdf)
+- 📄 [My CV](ShayanJL.pdf)
 
 --- 
 
