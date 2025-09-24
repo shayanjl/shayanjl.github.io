@@ -1,0 +1,5 @@
+/* System stack with Roboto fallback (lighter, modern) */
+body{ font-family: Inter, "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif !important; }
+.secondary-font, #secondary-font{ font-family: Inter, "Roboto", sans-serif; }
+.primary-font, #primary-font{ font-family: Inter, "Roboto", sans-serif; }
+.default-font, #default-font{ font-family: Inter, "Roboto", sans-serif; }
