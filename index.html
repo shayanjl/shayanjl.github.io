@@ -23,6 +23,13 @@
       :root{ --bg:#f7f9fe; --bg-elev:#ffffff; --text:#0a1020; --muted:#5b6786; --brand:#3b6cff; --accent:#10b981; --ring:rgba(59,108,255,.25); }
       body{ background-image: radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%), radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%); }
     }
+    /* Force theme overrides */
+    [data-theme="light"]:root{ --bg:#f7f9fe; --bg-elev:#ffffff; --text:#0a1020; --muted:#5b6786; --brand:#3b6cff; --accent:#10b981; --ring:rgba(59,108,255,.25); }
+    [data-theme="light"] body{ background-image: radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%), radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%); }
+    [data-theme="dark"]:root{ --bg:#0b1220; --bg-elev:#111a2b; --text:#e6eefc; --muted:#a9b6d6; --brand:#7aa2ff; --accent:#6ee7b7; --ring:rgba(122,162,255,.35); }
+    [data-theme="dark"] body{ background-image: radial-gradient(40vw 40vw at -10% -20%, #102038 0, transparent 70%), radial-gradient(30vw 30vw at 110% -10%, #0b2a2a 0, transparent 60%); }
+      body{ background-image: radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%), radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%); }
+    }
     *{ box-sizing: border-box }
     html,body{ margin:0; padding:0 }
     body{
@@ -95,8 +102,8 @@
           <a class=\"btn primary\" href=\"ShayanJL.pdf\" download>⬇️ Download CV</a>
           <div class=\"flex\">
             <a class=\"btn\" href=\"mailto:shayanjalali.bioinformatics@gmail.com\">✉️ Gmail</a>
-            <a class=\"btn\" href=\"mailto:shayan.jalali@uniupo.it\">✉️ Uniupo</a>
-            <a class=\"btn\" href=\"mailto:shayan.jalali@rcsi.ie\">✉️ RCSI</a>
+            <a class=\"btn\" href=\"mailto:20057956@studenti.uniupo.it\">✉️ Uniupo</a>
+            <a class=\"btn\" href=\"mailto:shayanjalali@rcsi.com\">✉️ RCSI</a>
           </div>
           <a class="btn" href="https://www.linkedin.com/in/shayanjl" target="_blank" rel="noopener">in LinkedIn</a>
         </div>
@@ -158,12 +165,19 @@
     <!-- Contact -->
     <section id="contact">
       <h2>Contact</h2>
-      <p class="muted">Best ways to reach me:</p>
+      <p class="muted">Choose an email or find me on these platforms:</p>
+      <div class="flex" style="margin-bottom:10px">
+        <a class="btn" href="mailto:shayanjalali.bioinformatics@gmail.com">Gmail</a>
+        <a class="btn" href="mailto:shayanjalali@rcsi.com">RCSI</a>
+        <a class="btn" href="mailto:20057956@studenti.uniupo.it">UniUPO</a>
+      </div>
       <div class="flex">
-        <a class="btn" href="mailto:shayanjalali.bioinformatics@gmail.com">Email</a>
-        <a class="btn" href="https://wa.me/message/OM3DBDI2O44DB1" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="https://cal.com/shayan-jalali/15min" target="_blank" rel="noopener">Book a meeting</a>
-        <a class="btn" href="https://shayanjl.github.io" target="_blank" rel="noopener">Website</a>
+        <a class="btn" href="https://www.linkedin.com/in/shayanjl" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Shayanjl" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://shayanjl.github.io/" target="_blank" rel="noopener">Website</a>
+        <a class="btn" href="https://youtube.com/@shayanjl" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://orcid.org/0009-0005-3909-2920" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://wa.me/message/OM3DBDl2O44DB1" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </section>
   </main>
@@ -180,9 +194,15 @@
     const current = localStorage.getItem('theme') || 'auto';
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
     const setTheme = (mode) => {
-      document.documentElement.dataset.theme = mode;
+      if(mode === 'auto'){
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', mode);
+      }
       localStorage.setItem('theme', mode);
       btn.setAttribute('aria-pressed', mode === 'dark');
+      const label = mode === 'auto' ? 'Auto' : (mode === 'dark' ? 'Dark' : 'Light');
+      btn.textContent = (mode === 'dark' ? '🌚' : mode === 'light' ? '🌞' : '🌓') + ' ' + label;
     }
     const cycle = { 'auto':'dark', 'dark':'light', 'light':'auto' };
     setTheme(current);
