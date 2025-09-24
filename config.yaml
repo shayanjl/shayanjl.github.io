@@ -1,0 +1,149 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Site
+# ──────────────────────────────────────────────────────────────────────────────
+baseURL: "https://shayanjl.github.io/"
+title: "Shayan Jalali — Bioinformatics & Computational Biology"
+languageCode: "en-us"
+theme: "hugo-profile"
+paginate: 10
+enableRobotsTXT: true
+
+# What Hugo generates
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML"]
+  term: ["HTML"]
+
+# Pretty URLs for content sections
+permalinks:
+  posts: "/posts/:slug/"
+  projects: "/projects/:slug/"
+  publications: "/publications/:slug/"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Theme Params (safe, generic keys + your info)
+# ──────────────────────────────────────────────────────────────────────────────
+params:
+  # Leave blank to REMOVE favicon (you said this is the website, no icon)
+  favicon: ""
+
+  description: "Master's in Medical Biotechnology (UPO), Erasmus+ at RCSI Dublin. Bioinformatics, computational modeling, and ML for cancer research."
+  keywords: ["bioinformatics","systems biology","computational biology","machine learning","R","Python","Julia","omics"]
+
+  # Inject your custom CSS overrides from /static/css/
+  assets:
+    customCSS:
+      - "/css/theme.css"
+      - "/css/header.css"
+      - "/css/footer.css"
+      - "/css/font.css"
+      - "/css/index.css"
+      - "/css/projects.css"
+      - "/css/list.css"
+      - "/css/single.css"
+      - "/css/about.css"
+
+  # Palette (your black + #ffcc00). Themes that don’t read these still
+  # get the colors via customCSS above.
+  theme:
+    background: "#000000"
+    primaryColor: "#ffcc00"
+    textColor: "#f5f5f5"
+    mutedColor: "#bdbdbd"
+
+  profile:
+    name: "Shayan Jalali"
+    tagline: "Bioinformatics • Systems Biology • Machine Learning"
+    photo: "/images/ShayanJLphoto.png"
+    cv: "/files/ShayanJL.pdf"
+    location: "Dublin, Ireland • Novara, Italy"
+    email: "shayanjalali.bioinformatics@gmail.com"
+
+  social:
+    github: "https://github.com/Shayanjl"
+    linkedin: "https://www.linkedin.com/in/shayanjl"
+    orcid: "https://orcid.org/0009-0005-3909-2920"
+    researchgate: "https://www.researchgate.net/"
+    youtube: "https://youtube.com/@ShayanJL"
+    email: "mailto:shayanjalali.bioinformatics@gmail.com"
+    # optional phones you shared:
+    phone_it: "+393513392598"
+    phone_ie: "+353892301798"
+    whatsapp: "https://wa.me/message/OM3DBDI2O44DB1"
+
+  # Sections toggles (some hugo-profile variants read these)
+  sections:
+    showExperience: true
+    showEducation: true
+    showProjects: true
+    showPublications: true
+    showSkills: true
+    showContact: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Menus (top navbar)
+# ──────────────────────────────────────────────────────────────────────────────
+menu:
+  main:
+    - name: "About"
+      url: "#about"
+      weight: 1
+    - name: "Experience"
+      url: "#experience"
+      weight: 2
+    - name: "Education"
+      url: "#education"
+      weight: 3
+    - name: "Projects"
+      url: "#projects"
+      weight: 4
+    - name: "Publications"
+      url: "#publications"
+      weight: 5
+    - name: "Skills"
+      url: "#skills"
+      weight: 6
+    - name: "Contact"
+      url: "#contact"
+      weight: 7
+    - name: "CV"
+      url: "/files/ShayanJL.pdf"
+      weight: 8
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Content / Markdown rendering
+# ──────────────────────────────────────────────────────────────────────────────
+markup:
+  goldmark:
+    renderer:
+      unsafe: true     # allow inline HTML in your posts
+  highlight:
+    style: "monokai"
+    lineNos: false
+    guessSyntax: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Privacy (safe defaults)
+# ──────────────────────────────────────────────────────────────────────────────
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: false
+  youtube:
+    privacyEnhanced: true
+  twitter:
+    enableDNT: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Build & minify (optional but nice)
+# ──────────────────────────────────────────────────────────────────────────────
+minify:
+  disableJS: false
+  disableCSS: false
+  minifyOutput: true
