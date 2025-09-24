@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shayan Jalali — Bioinformatics & Computational Biology</title>
+  <meta name="description" content="Shayan Jalali — bioinformatics, systems biology, and computational modeling portfolio. Master's in Medical Biotechnology (UPO). Erasmus+ researcher at RCSI Dublin.">
+  <meta name="author" content="Shayan Jalali">
+  <!-- Open Graph for rich shares -->
+  <meta property="og:title" content="Shayan Jalali — Bioinformatics & Computational Biology" />
+  <meta property="og:description" content="Bioinformatics | Systems Biology | Machine Learning for Cancer Research" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="ShayanJLphoto.png" />
+  <meta property="og:url" content="https://shayanjl.github.io" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <!-- If you later split CSS, move styles into /css/main.css and link it here. -->
+  <style>
+    :root{ --bg:#0b0f17; --card:#121826; --text:#e6eefc; --muted:#9fb2d5; --brand:#5bd4ff; --brand-2:#a78bfa; --accent:#fbbf24; --ring:rgba(91,212,255,.35); --shadow:0 10px 30px rgba(0,0,0,.4); }
+    :root.light{ --bg:#f5f7fb; --card:#ffffff; --text:#0f172a; --muted:#4b5563; --ring:rgba(59,130,246,.25); }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:30;background:linear-gradient(to bottom,rgba(11,15,23,.9),rgba(11,15,23,.6),transparent)}
+    .nav{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:10px 0}
+    .nav a{font-weight:600;color:var(--text);opacity:.9}
+    .nav a:hover{opacity:1}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);font-weight:800}
+    .brand .title{font-weight:800;letter-spacing:.2px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:1px solid transparent;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#041016;font-weight:700;box-shadow:var(--shadow)}
+    .btn.outline{background:transparent;color:var(--text);border-color:rgba(255,255,255,.12)}
+    .btn.small{padding:8px 12px;font-size:.92rem;border-radius:10px}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{padding:48px 0 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 10px;font-size:.85rem;color:var(--muted)}
+    .headline{font-size:clamp(28px,4vw,44px);line-height:1.2;margin:14px 0}
+    .sub{color:var(--muted);max-width:60ch}
+    .stack{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .chip{padding:6px 10px;border-radius:999px;background:rgba(91,212,255,.12);border:1px solid var(--ring);font-size:.84rem}
+    .photo img{width:100%;border-radius:18px;border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow)}
+    .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+    .k .n{font-weight:800;font-size:1.25rem}
+    section{padding:36px 0}
+    .section-title{font-size:1.6rem;margin-bottom:10px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project .title{font-weight:700}
+    .project .meta{font-family:"JetBrains Mono",monospace;color:var(--muted);font-size:.85rem}
+    .list{display:grid;gap:12px}
+    .list li{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    footer{padding:44px 0 60px;color:var(--muted)}
+    .toolbar{display:flex;gap:8px;align-items:center}
+    .toggle{cursor:pointer}
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr;} .grid{grid-template-columns:1fr;} .split{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">SJ</div>
+        <div class="title">Shayan Jalali</div>
+      </div>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <div class="toolbar">
+          <button id="themeToggle" class="btn small outline toggle" aria-pressed="false" aria-label="Toggle theme">🌙</button>
+          <a class="btn small" href="ShayanJL.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <div class="card">
+        <span class="badge">Bioinformatics • Systems Biology • ML</span>
+        <h1 class="headline">Hi, I'm Shayan — I build data-driven models and tools for cancer research.</h1>
+        <p class="sub">Master's student in Medical Biotechnology at <strong>UPO (Italy)</strong> and Erasmus+ research intern at <strong>RCSI Dublin</strong>. I work across <em>bioinformatics, computational modeling</em>, and <em>machine learning</em> with 6+ years of experience from wet lab to code.</p>
+        <div class="stack" aria-label="Tech stack">
+          <span class="chip">Python</span>
+          <span class="chip">R / tidyverse</span>
+          <span class="chip">Julia</span>
+          <span class="chip">DifferentialEquations.jl</span>
+          <span class="chip">WGCNA</span>
+          <span class="chip">GEO / TCGA</span>
+          <span class="chip">Cytoscape</span>
+          <span class="chip">Git & GitHub</span>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:18px">
+          <a class="btn" href="#contact">Get in touch</a>
+          <!-- Removed redundant Website button -->
+        </div>
+        <div class="kpi" role="list" aria-label="Highlights">
+          <div class="card k"><div class="n">6+ yrs</div><div>Research experience</div></div>
+          <div class="card k"><div class="n">3 domains</div><div>Wet lab • Modeling • ML</div></div>
+          <div class="card k"><div class="n">PhD-ready</div><div>Open to positions</div></div>
+        </div>
+      </div>
+      <div class="photo"><img src="ShayanJLphoto.png" alt="Portrait of Shayan Jalali" /></div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section class="split" id="experience">
+      <div class="card">
+        <h2 class="section-title">Experience</h2>
+        <ul class="list">
+          <li><strong>Erasmus+ Researcher — RCSI Dublin</strong> (2025) • ODE modeling of erythropoiesis, Sobol/Morris GSA, biomarker pipelines.</li>
+          <li><strong>Bioinformatics Analyst — Academic Projects</strong> (2023–2025) • DESeq2/limma, enrichment analysis, GEO/TCGA curation.</li>
+          <li><strong>Wet Lab Assistant</strong> • PCR/Primer design, sequencing prep, karyotyping support.</li>
+        </ul>
+      </div>
+      <div class="card" id="education">
+        <h2 class="section-title">Education</h2>
+        <ul class="list">
+          <li><strong>MSc, Medical Biotechnology</strong> — University of Eastern Piedmont (UPO), Italy.</li>
+          <li><strong>BSc, Biotechnology</strong> — IAU University.</li>
+          <li>Graduate coursework: Systems biology, Omics, ML for biomedicine.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="grid">
+        <article class="card project">
+          <div class="meta">Julia • ODEs • Global Sensitivity</div>
+          <h3 class="title">Erythropoiesis Modeling in AML</h3>
+          <p>ODE-based models of nurse macrophage–driven erythropoiesis, with Sobol & Morris sensitivity analysis to evaluate treatment strategies (RCSI, Dublin).</p>
+          <a class="btn small outline" href="#contact">Discuss project</a>
+        </article>
+        <article class="card project">
+          <div class="meta">R • Machine Learning • GEO</div>
+          <h3 class="title">Biomarker Discovery Pipelines</h3>
+          <p>End-to-end workflows for bulk/single-cell transcriptomics (limma, DESeq2, clusterProfiler), model evaluation, and external GEO validation.</p>
+          <a class="btn small outline" href="#contact">See details</a>
+        </article>
+        <article class="card project">
+          <div class="meta">Python • scikit-learn</div>
+          <h3 class="title">Peritoneal Metastasis Prediction</h3>
+          <p>Supervised models (RF/SVM/Logistic) for early detection in gastric cancer — manuscript in preparation.</p>
+          <a class="btn small outline" href="#contact">Preprint updates</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2 class="section-title">Publications & Manuscripts</h2>
+      <ul class="list" aria-label="Publications">
+        <li><strong>2025 —</strong> <em>Peritoneal Metastasis Prediction in Gastric Cancer</em> (First author) — manuscript in preparation.</li>
+        <li><strong>2025 —</strong> <em>Remodeling of Nurse Macrophages & EBIs in AML</em> — submitted (Erasmus+ project & Master's thesis).</li>
+        <li><strong>2025 —</strong> <em>Circulating miRNA Panels for Early Gastric Cancer</em> — manuscript in preparation.</li>
+        <li><strong>2023 —</strong> <em>Nanobodies & Biotechnology in Cancer Treatment</em> — published & presented.</li>
+      </ul>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="grid">
+        <div class="card"><h3>Programming</h3><p>Python, R (tidyverse, limma, DESeq2, WGCNA, clusterProfiler), Julia (DifferentialEquations.jl), Bash, Git, LaTeX.</p></div>
+        <div class="card"><h3>Bioinformatics</h3><p>Bulk & scRNA-seq, GEO/TCGA, differential expression, pathway enrichment (GSEA/Reactome), network analysis (Cytoscape).</p></div>
+        <div class="card"><h3>Modeling & ML</h3><p>ODE modeling, GSA (Sobol/Morris), feature selection, KNN, SVM, Random Forest, validation with external datasets.</p></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Let's collaborate</h3>
+          <p>I'm actively seeking PhD opportunities in computational biology, systems medicine, and AI-driven biomedical research.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="mailto:shayanjalali.bioinformatics@gmail.com">Email Me</a>
+            <a class="btn outline" href="tel:+393513392598">Call (IT)</a>
+            <a class="btn outline" href="tel:+353892301798">Call (IE)</a>
+            <a class="btn outline" href="http://wa.me/message/OM3DBDl2O44DB1" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/shayanjl" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/Shayanjl" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://shayanjl.github.io/" target="_blank" rel="noopener">Website (this site)</a></li>
+            <li><a href="https://youtube.com/@shayanjl" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://orcid.org/0009-0005-3909-2920" target="_blank" rel="noopener">ORCID</a></li>
+            <li><a href="https://www.researchgate.net/" target="_blank" rel="noopener">ResearchGate</a></li>
+            <li><a href="https://www.rcsi.com/" target="_blank" rel="noopener">RCSI</a> • <a href="https://www.uniupo.it/" target="_blank" rel="noopener">UPO</a> • <a href="https://caad.uniupo.it/" target="_blank" rel="noopener">CAAD</a></li>
+          </ul>
+          <p><strong>Emails</strong><br>
+            shayanjalali@rcsi.com<br>
+            shayanjalali.bioinformatics@gmail.com<br>
+            20057956@studenti.uniupo.it
+          </p>
+          <p><strong>Locations</strong><br>Dublin, Ireland • Novara, Italy</p>
+        </div>
+        <div class="card">
+          <h3>Book a Meeting</h3>
+          <p>15-min intro call to discuss research, projects, or supervision.</p>
+          <a class="btn" href="https://cal.com/shayan-jalali/15min" target="_blank" rel="noopener">Book via Cal.com</a>
+        </div>
+      </div>
+    </section>
+      <!-- Courses & Certificates -->
+    <section id="certs">
+      <h2 class="section-title">Courses & Certificates</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Programming & ML</h3>
+          <ul class="list">
+            <li><a href="https://coursera.org/verify/DWMYNPVGNREL" target="_blank" rel="noopener">Supervised Machine Learning: Regression and Classification</a></li>
+            <li><a href="https://coursera.org/verify/U7ZKSZ57NVL3" target="_blank" rel="noopener">Machine Learning</a></li>
+            <li><a href="https://coursera.org/verify/275S276BQ53K" target="_blank" rel="noopener">Julia Scientific Programming</a></li>
+            <li><a href="https://coursera.org/verify/V56QBUK149E" target="_blank" rel="noopener">Foundations of Working with Databases in Python</a></li>
+            <li><a href="https://faradars.org/verify/78BABE47" target="_blank" rel="noopener">Fundamentals of R</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Bio/Pharma</h3>
+          <ul class="list">
+            <li><a href="https://coursera.org/verify/SLCM9KD2A4SF" target="_blank" rel="noopener">Drug Development</a></li>
+            <li><a href="https://coursera.org/verify/L4MU480RN9PE" target="_blank" rel="noopener">Drug Discovery</a></li>
+            <li><a href="https://coursera.org/verify/DWHT82B0RRQ6" target="_blank" rel="noopener">Genes and the Human Condition</a></li>
+            <li><a href="https://biologyevents.ir/certificate/user/inquiry?code=1739878663" target="_blank" rel="noopener">Regenerative Medicine</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Git & Data</h3>
+          <ul class="list">
+            <li><a href="https://faradars.org/verify/8C012193" target="_blank" rel="noopener">Mastering Git/GitHub/GitLab</a></li>
+            <li><a href="https://faradars.org/verify/B83C444A" target="_blank" rel="noopener">Artificial Intelligence Foundations</a></li>
+            <li><a href="https://coursera.org/verify/AC89FS27C3M3" target="_blank" rel="noopener">Data Mining</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+      <div><strong>© <span id="year"></span> Shayan Jalali</strong> • Built with HTML, CSS & JS. Deployed on GitHub Pages.</div>
+      <div style="display:flex;gap:10px">
+        <a href="#about">Top ↑</a>
+        <a href="https://github.com/Shayanjl" target="_blank" rel="noopener">GitHub</a>
+        <a href="ShayanJL.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle (light/dark) with localStorage persistence
+    const root = document.documentElement;
+    const key = 'sj-theme';
+    const btn = document.getElementById('themeToggle');
+    function apply(mode){
+      if(mode==='light'){ root.classList.add('light'); btn.textContent='☀️'; btn.setAttribute('aria-pressed','true'); }
+      else{ root.classList.remove('light'); btn.textContent='🌙'; btn.setAttribute('aria-pressed','false'); }
+    }
+    const saved = localStorage.getItem(key);
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    apply(saved || (prefersLight? 'light' : 'dark'));
+    btn.addEventListener('click',()=>{
+      const isLight = root.classList.toggle('light');
+      localStorage.setItem(key, isLight? 'light':'dark');
+      btn.textContent = isLight? '☀️' : '🌙';
+      btn.setAttribute('aria-pressed', isLight? 'true':'false');
+    });
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
