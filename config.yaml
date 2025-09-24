@@ -7,6 +7,10 @@ languageCode: "en-us"
 theme: "hugo-profile"
 paginate: 10
 enableRobotsTXT: true
+canonifyURLs: true
+sitemap:
+  changefreq: weekly
+  priority: 0.5
 
 # What Hugo generates
 outputs:
@@ -31,7 +35,7 @@ params:
   description: "Master's in Medical Biotechnology (UPO), Erasmus+ at RCSI Dublin. Bioinformatics, computational modeling, and ML for cancer research."
   keywords: ["bioinformatics","systems biology","computational biology","machine learning","R","Python","Julia","omics"]
 
-  # Inject your custom CSS overrides from /static/css/
+  # Inject your custom assets from /static/
   assets:
     customCSS:
       - "/css/theme.css"
@@ -43,9 +47,14 @@ params:
       - "/css/list.css"
       - "/css/single.css"
       - "/css/about.css"
+    customJS:
+      - "/js/all-5.15.4.js"          # Font Awesome 5 (JS build)
+      - "/js/contact.js"             # Formspree status bubble
+      - "/js/readingTime.js"         # "X min read"
+      - "/js/scrollProgressBar.js"   # top progress bar
+      - "/js/search.js"              # client-side search
 
-  # Palette (your black + #ffcc00). Themes that don’t read these still
-  # get the colors via customCSS above.
+  # Palette (black + #ffcc00). Themes that ignore these still get colors via CSS.
   theme:
     background: "#000000"
     primaryColor: "#ffcc00"
@@ -67,12 +76,11 @@ params:
     researchgate: "https://www.researchgate.net/"
     youtube: "https://youtube.com/@ShayanJL"
     email: "mailto:shayanjalali.bioinformatics@gmail.com"
-    # optional phones you shared:
     phone_it: "+393513392598"
     phone_ie: "+353892301798"
     whatsapp: "https://wa.me/message/OM3DBDI2O44DB1"
 
-  # Sections toggles (some hugo-profile variants read these)
+  # Section toggles (if your theme reads them)
   sections:
     showExperience: true
     showEducation: true
