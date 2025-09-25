@@ -163,6 +163,12 @@ h2 {
   margin: 0 0 12px 0;
   color: var(--topic);
 }
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* bold */
+  color: var(--topic);
+}
+
 p.lead { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 70ch }
 
 main.container > section p {
