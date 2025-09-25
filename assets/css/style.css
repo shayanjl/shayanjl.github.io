@@ -210,3 +210,27 @@ a:focus-visible {
   border-radius: 14px;
 }
 
+.links a,
+.btn:not(.primary) {
+  position: relative;
+}
+
+.links a::after,
+.btn:not(.primary)::after {
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: 8px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: currentColor;
+  opacity: .55;
+  transition: transform .2s ease;
+}
+
+.links a:hover::after,
+.btn:not(.primary):hover::after {
+  transform: scaleX(1);
+}
+
+
