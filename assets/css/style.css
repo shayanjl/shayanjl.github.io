@@ -1,12 +1,12 @@
 /* —— CSS: minimal, responsive, dark-mode aware —— */
 :root {
   --topic: #ffcc00;
-  --bg: #0b1220; /* deep blue-gray */
+  --bg: #0b1220;            /* deep blue-gray */
   --bg-elev: #111a2b;
   --text: #e6eefc;
   --muted: #a9b6d6;
-  --brand: #7aa2ff; /* soft blue */
-  --accent: #6ee7b7; /* mint */
+  --brand: #7aa2ff;         /* soft blue */
+  --accent: #6ee7b7;        /* mint */
   --ring: rgba(122,162,255,.35);
   --card: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
 }
@@ -23,26 +23,27 @@
     --ring:rgba(59,108,255,.25);
   }
 
-  body {
-    background: var(--bg);
-    position: relative; /* needed for ::before */
-  }
+  /* Solid base + stacking context for overlay */
+  body { background: var(--bg); position: relative; }
 
+  /* Blurred overlay (gradients + pattern) */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
+    z-index: 0;                 /* visible behind content */
+    pointer-events: none;
     background:
       radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%),
       radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%),
       url("assets/img/bg-pattern.png") repeat;
-    background-size: 200px 200px, auto, auto, 200px 200px;
-    filter: blur(12px) opacity(0.25); /* ✨ blur + soften */
-    z-index: -1; /* behind all content */
+    background-size: auto, auto, 200px 200px;  /* 3 layers → 3 sizes */
+    filter: blur(12px) opacity(0.25);
   }
+
+  /* Ensure content is above overlay */
+  body > * { position: relative; z-index: 1; }
 }
-
-
 
 /* Force theme overrides (JS sets data-theme on <html>) */
 [data-theme="light"]:root {
@@ -54,11 +55,6 @@
   --accent:#10b981;
   --ring:rgba(59,108,255,.25);
 }
-[data-theme="light"] body {
-  background-image:
-    radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%),
-    radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%);
-}
 [data-theme="dark"]:root {
   --bg:#0b1220;
   --bg-elev:#111a2b;
@@ -68,50 +64,65 @@
   --accent:#6ee7b7;
   --ring:rgba(122,162,255,.35);
 }
-[data-theme="dark"] body {
-  background-image:
-    radial-gradient(40vw 40vw at -10% -20%, #102038 0, transparent 70%),
-    radial-gradient(30vw 30vw at 110% -10%, #0b2a2a 0, transparent 60%);
-}
 
 /* Base reset */
 * { box-sizing: border-box }
 html, body { margin:0; padding:0 }
-
-
 html { scroll-behavior: smooth; }
-
 
 body {
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
   background: var(--bg);
-  background-image:
-    radial-gradient(40vw 40vw at -10% -20%, #102038 0, transparent 70%),
-    radial-gradient(30vw 30vw at 110% -10%, #0b2a2a 0, transparent 60%);
 }
 
-a { color: var(--brand); text-decoration: none }
-a:hover { text-decoration: underline }
+/* Dark-mode default gradients + blurred pattern overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40vw 40vw at -10% -20%, #102038 0, transparent 70%),
+    radial-gradient(30vw 30vw at 110% -10%, #0b2a2a 0, transparent 60%),
+    url("assets/img/bg-pattern.png") repeat;
+  background-size: auto, auto, 400px 400px;
+  filter: blur(14px) opacity(0.18);
+}
+body > * { position: relative; z-index: 1; }
+
+/* If JS forces themes, keep gradients coherent */
+[data-theme="light"] body::before {
+  background:
+    radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%),
+    radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%),
+    url("assets/img/bg-pattern.png") repeat;
+  background-size: auto, auto, 200px 200px;
+  filter: blur(12px) opacity(0.25);
+}
+[data-theme="dark"] body::before {
+  background:
+    radial-gradient(40vw 40vw at -10% -20%, #102038 0, transparent 70%),
+    radial-gradient(30vw 30vw at 110% -10%, #0b2a2a 0, transparent 60%),
+    url("assets/img/bg-pattern.png") repeat;
+  background-size: auto, auto, 400px 400px;
+  filter: blur(14px) opacity(0.18);
+}
 
 /* Layout */
 .container { max-width: 1100px; margin: 0 auto; padding: 24px }
 
-
+/* Header with fallback + blur support + shadow */
 header {
   position: sticky;
   top: 0;
   z-index: 10;
   background: rgba(17, 26, 43, 0.6); /* fallback if no blur */
   border-bottom: 1px solid rgba(255,255,255,.06);
-
-  /* merged with Number 6 */
   box-shadow: 0 1px 0 rgba(255,255,255,.06) inset,
               0 10px 30px -25px var(--ring);
 }
-
-
-/* If blur is supported, use it */
 @supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
   header {
     -webkit-backdrop-filter: blur(10px);
@@ -119,16 +130,22 @@ header {
     background: color-mix(in oklab, var(--bg) 85%, transparent);
   }
 }
-
+/* Accessibility: reduce transparency if user prefers */
+@media (prefers-reduced-transparency: reduce) {
+  header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--bg-elev);
+  }
 }
+
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .nav a.brand { font-weight: 800; letter-spacing:.4px; color: var(--text) }
 .nav .links { display: flex; gap: 18px; flex-wrap: wrap; }
 
-
+/* Active section highlight in nav */
 .links a.active { color: var(--accent); }
 .links a.active::after { transform: scaleX(1); background: var(--accent); opacity: 1; }
-
 
 /* Buttons */
 .btn {
@@ -137,10 +154,15 @@ header {
   border:1px solid rgba(255,255,255,.14);
   background: var(--card); color:var(--text);
   box-shadow: 0 6px 24px -12px var(--ring);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 .btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 28px -10px var(--ring);
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px -12px var(--ring);
 }
 .btn.primary {
   background: linear-gradient(
@@ -151,44 +173,56 @@ header {
   border-color: transparent;
 }
 
-.btn {
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+/* Underline animation for nav links + secondary buttons */
+.links a,
+.btn:not(.primary) { position: relative; }
+.links a::after,
+.btn:not(.primary)::after {
+  content: "";
+  position: absolute;
+  left: 12px; right: 12px; bottom: 8px;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: currentColor;
+  opacity: .55;
+  transition: transform .2s ease;
 }
-.btn:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 18px -12px var(--ring);
+.links a:hover::after,
+.btn:not(.primary):hover::after { transform: scaleX(1); }
+
+/* Focus ring (accessibility) */
+.btn:focus-visible,
+a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 40%, white 0%);
+  border-color: color-mix(in oklab, var(--brand) 40%, white 0%);
+  border-radius: 14px;
 }
 
 /* Grids and sections */
 .grid { display:grid; gap: 22px; }
 @media (min-width: 900px){ .grid.cols-3{ grid-template-columns: repeat(3,1fr) } }
 @media (min-width: 700px){ .grid.cols-2{ grid-template-columns: repeat(2,1fr) } }
-
 section { padding: 56px 0 }
 
 /* Typography */
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;              /* bold */
+  color: var(--topic);
+}
 h1 {
   font-size: clamp(30px, 4.6vw, 54px);
   line-height: 1.1;
   margin: 0 0 16px 0;
-  color: var(--topic);
 }
 h2 {
   font-size: clamp(22px, 2.8vw, 32px);
   margin: 0 0 12px 0;
-  color: var(--topic);
 }
-h1, h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700; /* bold */
-  color: var(--topic);
-}
-
 p.lead { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 70ch }
-
-main.container > section p {
-  max-width: 70ch;
-}
+main.container > section p { max-width: 70ch; }
 
 /* Hero */
 .hero {
@@ -200,13 +234,15 @@ main.container > section p {
   background: var(--card);
   border: 1px solid rgba(255,255,255,.06);
 }
+
+/* Project thumbs */
 .project-thumb {
   width:100%; aspect-ratio:16/9; object-fit:cover;
   border-radius:12px; border:1px solid rgba(255,255,255,.08);
   background: rgba(255,255,255,.03); display:block;
-  transition: transform .35s ease, filter .35s ease; }
+  transition: transform .35s ease, filter .35s ease;
+}
 .card:hover .project-thumb { transform: scale(1.02); filter: saturate(1.05); }
-
 
 /* Misc components */
 .pill {
@@ -218,6 +254,11 @@ main.container > section p {
 .card {
   border-radius: 16px; background: var(--bg-elev);
   border: 1px solid rgba(255,255,255,.06); padding: 18px;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px -18px var(--ring);
 }
 .muted { color: var(--muted) }
 ul.clean { list-style: none; padding: 0; margin: 0 }
@@ -243,76 +284,14 @@ footer {
   box-shadow: 0 8px 30px -12px var(--ring);
 }
 
-.card {
-  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-}
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 38px -18px var(--ring);
-}
-
-.btn:focus-visible,
-a:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 40%, white 0%);
-  border-color: color-mix(in oklab, var(--brand) 40%, white 0%);
-  border-radius: 14px;
-}
-
-.links a,
-.btn:not(.primary) {
-  position: relative;
-}
-
-.links a::after,
-.btn:not(.primary)::after {
-  content: "";
-  position: absolute;
-  left: 12px; right: 12px; bottom: 8px;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: currentColor;
-  opacity: .55;
-  transition: transform .2s ease;
-}
-
-.links a:hover::after,
-.btn:not(.primary):hover::after {
-  transform: scaleX(1);
-}
-
-/* Scroll reveal base state */
+/* Scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity .6s ease, transform .6s ease;
   will-change: opacity, transform;
 }
-
-/* When visible */
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Variants (optional) */
+.reveal.show { opacity: 1; transform: translateY(0); }
 .reveal-left   { transform: translateX(-24px); }
 .reveal-right  { transform: translateX(24px); }
-.reveal-left.show,
-.reveal-right.show {
-  transform: translateX(0);
-}
-
-/* Accessibility: disable animations if user prefers reduced motion */
-@media (prefers-reduced-transparency: reduce) {
-  header {
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    background: var(--bg-elev); /* solid background */
-  }
-}
-
-
-
-
+.reveal-left.show, .reveal-right.show { transform: translateX(0); }
