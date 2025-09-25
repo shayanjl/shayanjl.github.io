@@ -110,6 +110,17 @@ header {
 .nav a.brand { font-weight: 800; letter-spacing:.4px; color: var(--text) }
 .nav .links { display: flex; gap: 18px; flex-wrap: wrap; }
 
+
+.links a.active {
+  color: var(--accent);
+}
+.links a.active::after {
+  transform: scaleX(1);
+  background: var(--accent);
+  opacity: 1;
+}
+
+
 /* Buttons */
 .btn {
   display:inline-flex; align-items:center; gap:.5rem;
