@@ -22,14 +22,17 @@
     --accent:#10b981;
     --ring:rgba(59,108,255,.25);
   }
+
   body {
-    background-image:
+    background: var(--bg),
       radial-gradient(40vw 40vw at 20% -10%, #dce8ff 0, transparent 60%),
-      radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%);
-      background: var(--bg) url("assets/img/bg-pattern.png") repeat;
-      background-size: 200px 200px; /* adjust tile size */
+      radial-gradient(30vw 30vw at 110% 10%, #e7fff5 0, transparent 60%),
+      url("assets/img/bg-pattern.png");
+    background-repeat: repeat;
+    background-size: 200px 200px, auto, auto, 200px 200px;
   }
 }
+
 
 /* Force theme overrides (JS sets data-theme on <html>) */
 [data-theme="light"]:root {
