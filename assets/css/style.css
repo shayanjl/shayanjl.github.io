@@ -82,11 +82,25 @@ a:hover { text-decoration: underline }
 /* Layout */
 .container { max-width: 1100px; margin: 0 auto; padding: 24px }
 
+
 header {
-  position: sticky; top: 0; z-index: 10; backdrop-filter: blur(10px);
-  background: color-mix(in oklab, var(--bg) 85%, transparent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(17, 26, 43, 0.6); /* fallback if no blur */
   border-bottom: 1px solid rgba(255,255,255,.06);
   box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 10px 30px -25px var(--ring);
+}
+
+/* If blur is supported, use it */
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+  header {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: color-mix(in oklab, var(--bg) 85%, transparent);
+  }
+}
+
 }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .nav a.brand { font-weight: 800; letter-spacing:.4px; color: var(--text) }
@@ -257,15 +271,14 @@ a:focus-visible {
 }
 
 /* Accessibility: disable animations if user prefers reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .reveal,
-  .reveal-left,
-  .reveal-right {
-    opacity: 1;
-    transform: none;
-    transition: none;
+@media (prefers-reduced-transparency: reduce) {
+  header {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--bg-elev); /* solid background */
   }
 }
+
 
 
 
