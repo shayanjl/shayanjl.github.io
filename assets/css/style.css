@@ -233,4 +233,38 @@ a:focus-visible {
   transform: scaleX(1);
 }
 
+/* Scroll reveal base state */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+/* When visible */
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variants (optional) */
+.reveal-left   { transform: translateX(-24px); }
+.reveal-right  { transform: translateX(24px); }
+.reveal-left.show,
+.reveal-right.show {
+  transform: translateX(0);
+}
+
+/* Accessibility: disable animations if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
 
