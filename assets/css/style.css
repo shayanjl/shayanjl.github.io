@@ -63,6 +63,10 @@
 * { box-sizing: border-box }
 html, body { margin:0; padding:0 }
 
+
+html { scroll-behavior: smooth; }
+
+
 body {
   font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--text);
@@ -106,6 +110,14 @@ header {
     color-mix(in oklab, var(--brand) 15%, #000 85%)
   );
   border-color: transparent;
+}
+
+.btn {
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px -12px var(--ring);
 }
 
 /* Grids and sections */
@@ -178,5 +190,21 @@ footer {
   width:140px; height:140px; border-radius:999px;
   object-fit:cover; border:2px solid rgba(255,255,255,.18);
   box-shadow: 0 8px 30px -12px var(--ring);
+}
+
+.card {
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px -18px var(--ring);
+}
+
+.btn:focus-visible,
+a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 40%, white 0%);
+  border-color: color-mix(in oklab, var(--brand) 40%, white 0%);
+  border-radius: 14px;
 }
 
