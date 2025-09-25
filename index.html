@@ -150,5 +150,17 @@
 
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 </script>
+<script>
+  const sections = [...document.querySelectorAll('section[id]')];
+  const navLinks = [...document.querySelectorAll('.links a[href^="#"]')];
+
+  const setActive = () => {
+    const y = window.scrollY + 120;
+    let current = sections[0]?.id;
+    for (const s of sections) if (s.offsetTop <= y) current = s.id;
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  };
+  setActive(); window.addEventListener('scroll', setActive, { passive: true });
+</script>
 </body>
 </html>
