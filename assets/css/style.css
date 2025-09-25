@@ -160,6 +160,10 @@ h2 {
 }
 p.lead { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 70ch }
 
+main.container > section p {
+  max-width: 70ch;
+}
+
 /* Hero */
 .hero {
   display:grid; gap: 22px; align-items: center;
