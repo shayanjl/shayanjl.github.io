@@ -155,7 +155,9 @@ p.lead { font-size: clamp(16px, 2vw, 20px); color: var(--muted); max-width: 70ch
   width:100%; aspect-ratio:16/9; object-fit:cover;
   border-radius:12px; border:1px solid rgba(255,255,255,.08);
   background: rgba(255,255,255,.03); display:block;
-}
+  transition: transform .35s ease, filter .35s ease; }
+.card:hover .project-thumb { transform: scale(1.02); filter: saturate(1.05); }
+
 
 /* Misc components */
 .pill {
