@@ -111,14 +111,8 @@ header {
 .nav .links { display: flex; gap: 18px; flex-wrap: wrap; }
 
 
-.links a.active {
-  color: var(--accent);
-}
-.links a.active::after {
-  transform: scaleX(1);
-  background: var(--accent);
-  opacity: 1;
-}
+.links a.active { color: var(--accent); }
+.links a.active::after { transform: scaleX(1); background: var(--accent); opacity: 1; }
 
 
 /* Buttons */
