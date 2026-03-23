@@ -15,6 +15,7 @@
       <a class="brand" href="#">Shayan Jalali</a>
       <nav class="links">
         <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
@@ -59,6 +60,36 @@
       <p>I'm a computational biologist focused on biomarker discovery and systems modeling. I build reproducible analyses and clean visualizations, typically in R/Python, and I prototype mathematical models (ODEs) in Julia.</p>
     </section>
 
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="grid cols-2">
+        <article class="card">
+          <p>“Shayan stood out for his creativity, cross-disciplinary thinking, and valuable contributions to the model’s global sensitivity analysis.”</p>
+          <h3 style="margin-bottom:4px;">Dr. Marc Sturrock</h3>
+          <p class="muted" style="margin-top:0;">Master’s Thesis Supervisor, RCSI, Ireland</p>
+        </article>
+
+        <article class="card">
+          <p>“When working with student communities, you quickly notice who truly wants to learn. Shayan is a wonderful example of that group: dedicated, growth-driven, and eager to enrich any team he joins.”</p>
+          <h3 style="margin-bottom:4px;">Iuliia Novoselova</h3>
+          <p class="muted" style="margin-top:0;">Head of Office, West German Genome Center | Scientific Community Manager | Mentor</p>
+        </article>
+
+        <article class="card">
+          <p>“Shayan ranks among the top students I have supervised, combining technical skill, intellectual curiosity, and strong scientific communication.”</p>
+          <h3 style="margin-bottom:4px;">Dr. Mohammadreza Azimi</h3>
+          <p class="muted" style="margin-top:0;">Associate Professor, Department of Artificial Intelligence, Riga Stradins University</p>
+        </article>
+
+        <article class="card">
+          <p>“Shayan combines strong scientific intuition with precise and reliable work, with an impressive ability to connect laboratory insight and computational analysis.”</p>
+          <h3 style="margin-bottom:4px;">Dr. Justyna Malecka</h3>
+          <p class="muted" style="margin-top:0;">Mentor and Lecturer, Università del Piemonte Orientale (UPO)</p>
+        </article>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section id="projects">
       <h2>Projects</h2>
@@ -77,8 +108,8 @@
         </article>
         <article class="card">
           <img class="project-thumb" src="assets/img/projects/scrna.jpg" alt="Single-cell RNA-seq Pipelines" loading="lazy" />
-          <h3 style="margin-top:12px">Single‑cell Pipelines</h3>
-          <p class="muted">scRNA‑seq preprocessing, clustering, and DE with Seurat/Scanpy; pathway enrichment and network analysis.</p>
+          <h3 style="margin-top:12px">Single-cell Pipelines</h3>
+          <p class="muted">scRNA-seq preprocessing, clustering, and DE with Seurat/Scanpy; pathway enrichment and network analysis.</p>
           <a class="btn" href="#">View repo</a>
         </article>
       </div>
@@ -143,26 +174,26 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <script>
-  // Reveal on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.12 });
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
 
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
-</script>
-<script>
-  const sections = [...document.querySelectorAll('section[id]')];
-  const navLinks = [...document.querySelectorAll('.links a[href^="#"]')];
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+  </script>
+  <script>
+    const sections = [...document.querySelectorAll('section[id]')];
+    const navLinks = [...document.querySelectorAll('.links a[href^="#"]')];
 
-  const setActive = () => {
-    const y = window.scrollY + 120;
-    let current = sections[0]?.id;
-    for (const s of sections) if (s.offsetTop <= y) current = s.id;
-    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
-  };
-  setActive(); window.addEventListener('scroll', setActive, { passive: true });
-</script>
+    const setActive = () => {
+      const y = window.scrollY + 120;
+      let current = sections[0]?.id;
+      for (const s of sections) if (s.offsetTop <= y) current = s.id;
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    };
+    setActive(); window.addEventListener('scroll', setActive, { passive: true });
+  </script>
 </body>
 </html>
