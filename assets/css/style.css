@@ -250,9 +250,33 @@ a:focus-visible {
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
   height: auto;
+  vertical-align: top;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 899px) {
+  #projects .grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 699px) {
+  #projects .grid {
+    column-count: 1;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .card {
+    padding: 18px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+
   .container {
     padding: 16px;
   }
