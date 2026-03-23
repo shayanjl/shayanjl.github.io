@@ -235,28 +235,32 @@ a:focus-visible {
 @media (min-width: 900px){ .grid.cols-3{ grid-template-columns: repeat(3,1fr) } }
 @media (min-width: 700px){ .grid.cols-2{ grid-template-columns: repeat(2,1fr) } }
 
-/* Projects: use flex instead of grid so cards can have different heights */
+/* Projects: masonry-style layout */
 #projects .grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 22px;
-  align-items: flex-start;
+  column-count: 3;
+  column-gap: 22px;
+  display: block;
 }
 
 #projects .card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 22px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
   height: auto;
-  flex: 0 0 calc(33.333% - 14.67px);
 }
 
 @media (max-width: 899px) {
-  #projects .card {
-    flex: 0 0 calc(50% - 11px);
+  #projects .grid {
+    column-count: 2;
   }
 }
 
 @media (max-width: 699px) {
-  #projects .card {
-    flex: 0 0 100%;
+  #projects .grid {
+    column-count: 1;
   }
 }
 
