@@ -354,11 +354,6 @@ main.container > section p { max-width: 70ch; }
 
 
 /* Graduation slider */
-.graduation-slider {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
 .slider {
   position: relative;
   width: 100%;
