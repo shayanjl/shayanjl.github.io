@@ -353,13 +353,17 @@ main.container > section p { max-width: 70ch; }
 .card:hover .project-thumb { transform: scale(1.02); filter: saturate(1.05); }
 
 
-/* Graduation slider */
+/* Shared Slider Rules (Works for Graduation and Illustrations) */
+.illustrations-slider,
+.graduation-slider {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .slider {
   position: relative;
   width: 100%;
-  max-width: 900px;
   height: 520px;
-  margin: 0 auto;
   overflow: hidden;
   border-radius: 16px;
   background: rgba(255,255,255,.03);
