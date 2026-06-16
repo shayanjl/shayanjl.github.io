@@ -185,8 +185,8 @@ ul, ol { list-style: none; }
   display: grid;
   grid-template-columns: 1fr 310px;
   gap: 52px;
-  align-items: center;
-  padding-top: 80px;
+  align-items: start;      /* Changed from center to start */
+  padding-top: 140px;      /* Increased to cleanly push below fixed header */
   padding-bottom: 60px;
 }
 
