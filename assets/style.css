@@ -185,8 +185,8 @@ ul, ol { list-style: none; }
   display: grid;
   grid-template-columns: 1fr 310px;
   gap: 52px;
-  align-items: start;      /* Changed from center to start */
-  padding-top: 140px;      /* Increased to cleanly push below fixed header */
+  align-items: start;      /* Changed from center to start to resolve top empty space */
+  padding-top: 140px;      /* Increased padding to sit perfectly below fixed header */
   padding-bottom: 60px;
 }
 
@@ -762,6 +762,7 @@ ul, ol { list-style: none; }
   .pub-meta { flex-direction: row; align-items: center; gap: 8px; }
 
   .hero { padding-bottom: 0; }
+  .hero-inner { padding-top: 90px; } /* Added layout scaling balance rule here for smartphones */
   .section { padding: 52px 0; }
   .hero-title { font-size: 1.85rem; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
