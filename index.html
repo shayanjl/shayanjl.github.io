@@ -1,0 +1,690 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shayan Jalali — Bioinformatics &amp; Computational Biology</title>
+  <meta name="description" content="Portfolio of Shayan Jalali — bioinformatics, systems biology, mathematical modeling, and machine learning for biomedical research." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🧬</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Shayan Jalali</a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#illustrations">Illustrations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm theme-btn" id="themeBtn" aria-label="Toggle colour theme">🌓 Auto</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <img src="assets/img/profile.jpg" alt="Shayan Jalali" class="avatar" width="72" height="72" />
+          <span class="hero-eyebrow">Bioinformatics · Systems Biology · ML</span>
+          <h1 class="hero-title">
+            Turning biological data<br>into <em>insight</em>.
+          </h1>
+          <p class="hero-lead">
+            I work across transcriptomics, systems biology, and mathematical
+            modeling — building reproducible analyses and clean visualizations
+            in R, Python, and Julia.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="ShayanJL.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn btn-outline" href="#projects">View Projects</a>
+          </div>
+          <div class="hero-links">
+            <a class="icon-link" href="https://github.com/Shayanjl" target="_blank" rel="noopener">GitHub</a>
+            <a class="icon-link" href="https://www.linkedin.com/in/shayanjl" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="icon-link" href="mailto:shayanjalali.bioinformatics@gmail.com">Gmail</a>
+            <a class="icon-link" href="https://orcid.org/0009-0005-3909-2920" target="_blank" rel="noopener">ORCID</a>
+            <a class="icon-link" href="https://youtube.com/@shayanjl" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick profile">
+          <p class="hero-card-name">Shayan Jalali</p>
+          <ul class="info-list">
+            <li><span class="info-icon" aria-hidden="true">🎓</span> MSc Medical Biotechnology, UPO Italy</li>
+            <li><span class="info-icon" aria-hidden="true">🔬</span> Erasmus+ Researcher, RCSI Dublin</li>
+            <li><span class="info-icon" aria-hidden="true">🧮</span> Modeling: Julia · R · Python</li>
+            <li><span class="info-icon" aria-hidden="true">📍</span> Novara, Italy · Dublin, Ireland</li>
+          </ul>
+          <div class="tag-cloud">
+            <span class="tag">R</span>
+            <span class="tag">Python</span>
+            <span class="tag">Julia</span>
+            <span class="tag">WGCNA</span>
+            <span class="tag">scRNA-seq</span>
+            <span class="tag">DE</span>
+            <span class="tag">GSEA</span>
+            <span class="tag">Cytoscape</span>
+            <span class="tag">ODEs</span>
+            <span class="tag">ML</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span class="scroll-text">Scroll</span>
+        <span class="scroll-bar"></span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-eyebrow">01 — About</p>
+        <h2 class="section-title">Who I am</h2>
+        <div class="about-body reveal">
+          <p>I'm a computational biologist focused on biomarker discovery and
+          systems modeling. I build reproducible analyses and clean
+          visualizations, typically in R and Python, and prototype mathematical
+          models (ODEs) in Julia. My work spans transcriptomics, machine
+          learning for cancer diagnostics, and erythropoiesis modeling in the
+          context of Acute Myeloid Leukemia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALLERY — graduation photos auto-scroll slider
+    ============================================================ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <p class="section-eyebrow">02 — Gallery</p>
+        <h2 class="section-title">Photos</h2>
+
+        <div class="slider-wrap reveal">
+          <!-- Main crossfade panel -->
+          <div class="slider-card graduation-slider" id="gallery-card">
+            <div class="slider" id="gallery-slider">
+              <img src="./assets/img/gallery/graduation5.webp" alt="Shayan at graduation 1" class="slide active" />
+              <img src="./assets/img/gallery/graduation4.webp" alt="Shayan at graduation 2" class="slide" />
+              <img src="./assets/img/gallery/graduation3.webp" alt="Shayan at graduation 3" class="slide" />
+              <img src="./assets/img/gallery/graduation2.webp" alt="Shayan at graduation 4" class="slide" />
+              <img src="./assets/img/gallery/graduation1.webp" alt="Shayan at graduation 5" class="slide" />
+            </div>
+            <div class="slider-progress"><span class="slider-progress-bar" id="gallery-progress"></span></div>
+            <div class="slider-controls">
+              <button class="slider-btn prev" aria-label="Previous photo">&#8592;</button>
+              <div class="slider-dots" id="gallery-dots" role="tablist" aria-label="Gallery slides"></div>
+              <button class="slider-btn next" aria-label="Next photo">&#8594;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+    ============================================================ -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <p class="section-eyebrow">03 — Testimonials</p>
+        <h2 class="section-title">What colleagues say</h2>
+
+        <div class="grid grid-2">
+          <article class="testimonial-card reveal">
+            <p class="testimonial-quote">"Shayan stood out for his creativity,
+            cross-disciplinary thinking, and valuable contributions to the
+            model's global sensitivity analysis."</p>
+            <div class="testimonial-author">
+              <strong>Dr. Marc Sturrock</strong>
+              <span>Master's Thesis Supervisor, RCSI, Ireland</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p class="testimonial-quote">"When working with student communities,
+            you quickly notice who truly wants to learn. Shayan is a wonderful
+            example of that group: dedicated, growth-driven, and eager to enrich
+            any team he joins."</p>
+            <div class="testimonial-author">
+              <strong>Dr. Iuliia Novoselova</strong>
+              <span>Head of Office, West German Genome Center · Scientific Community Manager · Mentor</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p class="testimonial-quote">"Shayan ranks among the top students
+            I have supervised, combining technical skill, intellectual curiosity,
+            and strong scientific communication."</p>
+            <div class="testimonial-author">
+              <strong>Dr. Mohammadreza Azimi</strong>
+              <span>Full Professor, Dept. of Artificial Intelligence, Riga Stradins University</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <p class="testimonial-quote">"Shayan combines strong scientific
+            intuition with precise and reliable work, with an impressive ability
+            to connect laboratory insight and computational analysis."</p>
+            <div class="testimonial-author">
+              <strong>Dr. Justyna Malecka</strong>
+              <span>Mentor and Lecturer, Università del Piemonte Orientale (UPO)</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS
+    ============================================================ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-eyebrow">04 — Projects</p>
+        <h2 class="section-title">Selected work</h2>
+
+        <div class="grid grid-3">
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/img/project/ShayanMasterThesis.jpg" alt="Master Thesis project" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Mathematical Modelling of Nurse Macrophage-Driven Erythropoiesis Disruption in AML</h3>
+              <p>ODE-based modeling and global sensitivity analysis of AML-driven disruption of erythropoiesis, with biologically grounded hypothesis generation.</p>
+              <div class="project-links">
+                <a class="btn btn-outline btn-sm" href="https://shayanjl.github.io/MasterThesis/ShayanMasterThesis.pdf" target="_blank" rel="noopener">Full Thesis</a>
+                <a class="btn btn-ghost btn-sm" href="https://shayanjl.github.io/MasterThesis/AbstractShayanMasterThesis.pdf" target="_blank" rel="noopener">Abstract</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Shayanjl/erythropoiesis_model_ShayanJL" target="_blank" rel="noopener">Model Repo</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Shayanjl/VARS-GSA" target="_blank" rel="noopener">GSA Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/img/project/biolionaire-code-empire.jpg" alt="BioLionaire Code Empire book cover" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>BioLionaire Scientist: Volume 6 – Code Empire</h3>
+              <p>Co-authored volume on computational biology, bioinformatics, genomics, AI applications, and biotechnology innovation and business strategy.</p>
+              <div class="project-links">
+                <a class="btn btn-outline btn-sm" href="https://a.co/d/0g8BhKlL" target="_blank" rel="noopener">Amazon</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Shayanjl/The-TechBio-Code-Repository" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/img/project/sir-model-africa.jpg" alt="SIR epidemic simulation West Africa" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>SIR Epidemic Simulation (EVD in West Africa)</h3>
+              <p>Julia-based Ebola simulation with the SIR model, interactive parameter tuning, realistic epidemic curves, and optional GIF animation.</p>
+              <div class="project-links">
+                <a class="btn btn-outline btn-sm" href="https://github.com/Shayanjl/sir_model_africa" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/img/project/gastric-ml.jpg" alt="Gastric cancer machine learning" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Peritoneal Metastasis Prediction in Gastric Cancer</h3>
+              <p>Transcriptomics + ML for biomarker panels and peritoneal metastasis prediction; validated on external GEO datasets.</p>
+              <div class="project-links">
+                <a class="btn btn-outline btn-sm" href="https://doi.org/10.1101/2025.04.11.25325702" target="_blank" rel="noopener">Preprint</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Shayanjl/Gastric-Cancer-peritoneal-metastasis-ML" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/img/project/scrna.jpg" alt="Single-cell RNA-seq pipelines" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Single-cell RNA-seq Pipelines</h3>
+              <p>scRNA-seq preprocessing, clustering, and differential expression with Seurat/Scanpy; pathway enrichment and network analysis.</p>
+              <div class="project-links">
+                <a class="btn btn-outline btn-sm" href="https://github.com/Shayanjl/scRNAseq_data_analysis" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img-wrap">
+              <img src="assets/img/project/gastric-cancer-5-mirna-signature.jpg" alt="5-miRNA gastric cancer signature" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>5-miRNA Signature for Early Detection of Gastric Cancer</h3>
+              <p>ML-validated blood-based miRNA signature for early gastric cancer detection, published as a preprint and currently under peer review.</p>
+              <div class="project-links">
+                <a class="btn btn-outline btn-sm" href="https://www.preprints.org/manuscript/202510.1162" target="_blank" rel="noopener">Preprint</a>
+                <a class="btn btn-ghost btn-sm" href="https://github.com/Shayanjl/Bioinformatics_Genomic_Analysis_and_Biomarker_Discovery" target="_blank" rel="noopener">Repo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PUBLICATIONS
+    ============================================================ -->
+    <section class="section" id="publications">
+      <div class="container">
+        <p class="section-eyebrow">05 — Publications</p>
+        <h2 class="section-title">Scholarly Outputs</h2>
+
+        <div class="pub-list">
+
+          <div class="pub-item reveal">
+            <div class="pub-meta">
+              <span class="pub-year">2025–26</span>
+              <span class="pub-status status-review">Under Review</span>
+            </div>
+            <div class="pub-content">
+              <p class="pub-title">Remodeling of nurse macrophages and erythroblastic islands contributes to the loss of bone marrow erythropoiesis in acute myeloid leukemia</p>
+              <p class="pub-authors">Mosteo, …, Sturrock, M., Jalali, S., Lo Celso, C., &amp; Duarte, D.*</p>
+              <p class="pub-venue">Manuscript under review (anticipated 2025–2026)</p>
+            </div>
+          </div>
+
+          <div class="pub-item reveal">
+            <div class="pub-meta">
+              <span class="pub-year">2025</span>
+              <span class="pub-status status-preprint">Preprint</span>
+            </div>
+            <div class="pub-content">
+              <p class="pub-title">From tumor pathways to blood signature: A machine-learning-validated 5-miRNA signature for the early detection of gastric cancer</p>
+              <p class="pub-authors">Hassani, S., Momeni, M., Siahtiri, M., Massahi, S., Jalali, S., Salehi, S., &amp; Gholaminejad, A.*</p>
+              <p class="pub-venue">Preprints.org · Under review</p>
+              <a class="pub-link" href="https://www.preprints.org/manuscript/202510.1162" target="_blank" rel="noopener">View Preprint →</a>
+            </div>
+          </div>
+
+          <div class="pub-item reveal">
+            <div class="pub-meta">
+              <span class="pub-year">2025</span>
+              <span class="pub-status status-preprint">Preprint</span>
+            </div>
+            <div class="pub-content">
+              <p class="pub-title">Peritoneal metastasis prediction in gastric cancer: A machine learning approach</p>
+              <p class="pub-authors">Jalali, S., Dadkhah, K., &amp; Mirsaeid Ghazi, M.</p>
+              <p class="pub-venue">medRxiv · Under review</p>
+              <a class="pub-link" href="https://doi.org/10.1101/2025.04.11.25325702" target="_blank" rel="noopener">View Preprint →</a>
+            </div>
+          </div>
+
+          <div class="pub-item reveal">
+            <div class="pub-meta">
+              <span class="pub-year">2026</span>
+              <span class="pub-status status-published">Published</span>
+            </div>
+            <div class="pub-content">
+              <p class="pub-title">BioLionaire Scientist: Volume 6 – Code Empire</p>
+              <p class="pub-authors">Jabbarzadeh Kaboli, P., Jalali, S., Mohammadalizadeh Rami, S., &amp; Salahi, S.</p>
+              <p class="pub-venue">OncoVanguard Media, LLC</p>
+              <a class="pub-link" href="https://a.co/d/0g8BhKlL" target="_blank" rel="noopener">View on Amazon →</a>
+            </div>
+          </div>
+
+          <div class="pub-item reveal">
+            <div class="pub-meta">
+              <span class="pub-year">2023</span>
+              <span class="pub-status status-published">Published</span>
+            </div>
+            <div class="pub-content">
+              <p class="pub-title">Investigating the use of nanobodies and biotechnology methods in cancer treatment</p>
+              <p class="pub-authors">Jalali, S.</p>
+              <p class="pub-venue">1st International Congress of Cancer Genomics, Tehran, Iran, May 3–5 2023</p>
+              <a class="pub-link" href="https://civilica.com/doc/1823184/" target="_blank" rel="noopener">View Publication →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SCIENTIFIC ILLUSTRATIONS — auto-scroll slider
+    ============================================================ -->
+    <section class="section" id="illustrations">
+      <div class="container">
+        <p class="section-eyebrow">06 — Illustrations</p>
+        <h2 class="section-title">Scientific Illustrations</h2>
+        <p class="section-desc">Figures and graphical abstracts designed for research papers and presentations.</p>
+
+        <div class="slider-wrap reveal">
+          <div class="slider-card illustrations-slider" id="illus-card">
+            <div class="slider" id="illustrations-slider">
+              <img src="assets/img/figures/1.png" alt="Scientific figure 1" class="slide active" />
+              <img src="assets/img/figures/2.png" alt="Scientific figure 2" class="slide" />
+              <img src="assets/img/figures/3.png" alt="Scientific figure 3" class="slide" />
+              <img src="assets/img/figures/4.png" alt="Scientific figure 4" class="slide" />
+              <img src="assets/img/figures/5.png" alt="Scientific figure 5" class="slide" />
+              <img src="assets/img/figures/6.png" alt="Scientific figure 6" class="slide" />
+              <img src="assets/img/figures/7.png" alt="Scientific figure 7" class="slide" />
+              <img src="assets/img/figures/ImportantFeatures.png" alt="Analysis of important features" class="slide" />
+              <img src="assets/img/figures/Measures.png" alt="Performance measures plot" class="slide" />
+            </div>
+            <div class="slider-progress"><span class="slider-progress-bar" id="illus-progress"></span></div>
+            <div class="slider-controls">
+              <button class="slider-btn prev" aria-label="Previous figure">&#8592;</button>
+              <div class="slider-dots" id="illus-dots" role="tablist" aria-label="Illustration slides"></div>
+              <button class="slider-btn next" aria-label="Next figure">&#8594;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="section-eyebrow">07 — Contact</p>
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-desc">Open to research collaborations, PhD opportunities, and interesting projects in computational biology.</p>
+
+        <div class="contact-grid reveal">
+          <a class="contact-link" href="mailto:shayanjalali.bioinformatics@gmail.com">
+            <span class="contact-icon" aria-hidden="true">@</span>Gmail
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/shayanjl" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">in</span>LinkedIn
+          </a>
+          <a class="contact-link" href="https://github.com/Shayanjl" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">&lt;/&gt;</span>GitHub
+          </a>
+          <a class="contact-link" href="https://orcid.org/0009-0005-3909-2920" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">ID</span>ORCID
+          </a>
+          <a class="contact-link" href="https://youtube.com/@shayanjl" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">▶</span>YouTube
+          </a>
+          <a class="contact-link" href="https://wa.me/message/OM3DBDl2O44DB1" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">WA</span>WhatsApp
+          </a>
+          <a class="contact-link" href="https://x.com/shayanbiotech" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">𝕏</span>X / Twitter
+          </a>
+          <a class="contact-link" href="https://shayanjl.github.io/" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">🌐</span>Website
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-copy">© <span id="year"></span> Shayan Jalali</span>
+      <span class="footer-tech">HTML · CSS · JS · Bioinformatics</span>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+  (() => {
+    'use strict';
+
+    /* ── Theme toggle ─────────────────────────────────────────── */
+    const themeBtn = document.getElementById('themeBtn');
+    const ICONS   = { auto:'🌓', dark:'🌚', light:'🌞' };
+    const LABELS  = { auto:'Auto', dark:'Dark', light:'Light' };
+    const CYCLE   = { auto:'dark', dark:'light', light:'auto' };
+
+    const applyTheme = mode => {
+      if (mode === 'auto') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', mode);
+      localStorage.setItem('theme', mode);
+      themeBtn.textContent = `${ICONS[mode]} ${LABELS[mode]}`;
+    };
+
+    applyTheme(localStorage.getItem('theme') || 'auto');
+    themeBtn.addEventListener('click', () =>
+      applyTheme(CYCLE[localStorage.getItem('theme') || 'auto'])
+    );
+
+    /* ── Year ─────────────────────────────────────────────────── */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ── Sticky header ────────────────────────────────────────── */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () =>
+      header.classList.toggle('scrolled', window.scrollY > 20),
+      { passive: true }
+    );
+
+    /* ── Mobile menu ──────────────────────────────────────────── */
+    const menuBtn  = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('nav-links');
+
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a =>
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', false);
+      })
+    );
+
+    /* ── Active nav link on scroll ────────────────────────────── */
+    const sections    = [...document.querySelectorAll('section[id]')];
+    const allNavLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+
+    const setActive = () => {
+      const y = window.scrollY + 130;
+      let current = sections[0]?.id;
+      for (const s of sections) if (s.offsetTop <= y) current = s.id;
+      allNavLinks.forEach(a =>
+        a.classList.toggle('active', a.getAttribute('href') === `#${current}`)
+      );
+    };
+    setActive();
+    window.addEventListener('scroll', setActive, { passive: true });
+
+    /* ── Scroll reveal ────────────────────────────────────────── */
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('show'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+    /* ── Slider engine ────────────────────────────────────────── */
+    const initSlider = ({ sliderId, dotsId, progressId, interval = 3000 }) => {
+      const sliderEl   = document.getElementById(sliderId);
+      const dotsEl     = document.getElementById(dotsId);
+      const progressEl = document.getElementById(progressId);
+      if (!sliderEl || !dotsEl) return;
+
+      const slides    = [...sliderEl.querySelectorAll('.slide')];
+      const card      = sliderEl.closest('.slider-card');
+      const prevBtn   = card.querySelector('.prev');
+      const nextBtn   = card.querySelector('.next');
+      let current     = 0;
+      let timer       = null;
+      let paused      = false;
+      let progressAnim = null;
+
+      /* Build dot buttons */
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className   = `dot${i === 0 ? ' active' : ''}`;
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Slide ${i + 1}`);
+        dot.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(dot);
+      });
+      const dots = [...dotsEl.querySelectorAll('.dot')];
+
+      /* Animate progress bar */
+      const startProgress = () => {
+        if (!progressEl) return;
+        progressEl.style.transition = 'none';
+        progressEl.style.width = '0%';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          progressEl.style.transition = `width ${interval}ms linear`;
+          progressEl.style.width = '100%';
+        }));
+      };
+
+      const goTo = idx => {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (idx + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+        resetTimer();
+        startProgress();
+      };
+
+      const next = () => goTo(current + 1);
+      const prev = () => goTo(current - 1);
+
+      const startTimer = () => { timer = setInterval(next, interval); };
+      const resetTimer = () => { clearInterval(timer); if (!paused) startTimer(); };
+
+      /* Pause on hover/focus */
+      card.addEventListener('mouseenter', () => { paused = true;  clearInterval(timer); });
+      card.addEventListener('mouseleave', () => { paused = false; startTimer(); startProgress(); });
+      card.addEventListener('focusin',   () => { paused = true;  clearInterval(timer); });
+      card.addEventListener('focusout',  () => { paused = false; startTimer(); });
+
+      /* Arrow buttons */
+      if (prevBtn) prevBtn.addEventListener('click', prev);
+      if (nextBtn) nextBtn.addEventListener('click', next);
+
+      /* Keyboard on focused card */
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft')  { prev(); e.preventDefault(); }
+        if (e.key === 'ArrowRight') { next(); e.preventDefault(); }
+      });
+
+      /* Touch / swipe */
+      let touchX = 0;
+      sliderEl.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      sliderEl.addEventListener('touchend', e => {
+        const diff = touchX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 44) diff > 0 ? next() : prev();
+      }, { passive: true });
+
+      startTimer();
+      startProgress();
+    };
+
+    initSlider({ sliderId:'gallery-slider',       dotsId:'gallery-dots', progressId:'gallery-progress', interval:2500 });
+    initSlider({ sliderId:'illustrations-slider', dotsId:'illus-dots',   progressId:'illus-progress',   interval:3500 });
+
+    /* ── Hero canvas particle network ─────────────────────────── */
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const ctx = canvas.getContext('2d');
+    let W, H, pts = [];
+    const COUNT = 55;
+    const LINK_DIST = 130;
+
+    const resize = () => {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    };
+
+    class Point {
+      constructor() { this.init(); }
+      init() {
+        this.x  = Math.random() * W;
+        this.y  = Math.random() * H;
+        this.vx = (Math.random() - 0.5) * 0.38;
+        this.vy = (Math.random() - 0.5) * 0.38;
+        this.r  = Math.random() * 1.6 + 0.5;
+        this.a  = Math.random() * 0.45 + 0.18;
+      }
+      update() {
+        this.x += this.vx; this.y += this.vy;
+        if (this.x < 0 || this.x > W) this.vx *= -1;
+        if (this.y < 0 || this.y > H) this.vy *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0,212,255,${this.a})`;
+        ctx.fill();
+      }
+    }
+
+    const tick = () => {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < pts.length; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+          const dx = pts[i].x - pts[j].x;
+          const dy = pts[i].y - pts[j].y;
+          const d2 = dx * dx + dy * dy;
+          if (d2 < LINK_DIST * LINK_DIST) {
+            const alpha = 0.1 * (1 - Math.sqrt(d2) / LINK_DIST);
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(pts[j].x, pts[j].y);
+            ctx.strokeStyle = `rgba(0,212,255,${alpha})`;
+            ctx.lineWidth = 0.7;
+            ctx.stroke();
+          }
+        }
+        pts[i].update();
+        pts[i].draw();
+      }
+      requestAnimationFrame(tick);
+    };
+
+    resize();
+    pts = Array.from({ length: COUNT }, () => new Point());
+    tick();
+    window.addEventListener('resize', () => { resize(); pts.forEach(p => p.init()); }, { passive: true });
+
+  })();
+  </script>
+
+</body>
+</html>
